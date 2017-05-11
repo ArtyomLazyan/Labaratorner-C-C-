@@ -1,0 +1,7 @@
+﻿  xndir1.3.cpp
+c:\users\t-y-o-m\documents\visual studio 2017\projects\1.3\1.3\xndir1.3.cpp(16): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\t-y-o-m\documents\visual studio 2017\projects\1.3\1.3\xndir1.3.cpp(26): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(129): note: see declaration of 'strcpy'
+  1.3.vcxproj -> c:\users\t-y-o-m\documents\visual studio 2017\Projects\1.3\Debug\1.3.exe
+  1.3.vcxproj -> c:\users\t-y-o-m\documents\visual studio 2017\Projects\1.3\Debug\1.3.pdb (Partial PDB)
