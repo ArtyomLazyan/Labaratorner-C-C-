@@ -14,7 +14,6 @@ int main(void)
     
     int days[12] = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
     
-    // nermucum enq amis amsativ
     printf("Set Month: ");
     scanf("%d", &Today.month);
     
@@ -24,33 +23,28 @@ int main(void)
     printf("Set Year: ");
     scanf("%d", &Today.year);
     
-    // stuguma vor xelqin mot amis u or grvi :D
+    // validacia
     if ((Today.month > 12 && Today.month < 0) || (Today.day > 31 && Today.day < 0))
     {
-        // ete sxala cragir@ avartvuma
         printf("Wrong Day or Month\n");
         return 0;
     }
     
-    // stuguma tarin nahanja te che
+    // stugume tarin nahanja te che
     // ete tarin bajanvuma 4 i u verji 2 tvanshan@ 0 chi uremn nahanja
-    // kamel ete verji erku tvanshan@ zroya uremn petqa bajanvi 400 i vor lini nahanj tari
+    // kamel ete verji erku tvanshan@ zro en petqe bajanvi 400 i vor lini nahanj tari
     // orinak 1700 bajanvuma 4-i bayc nahanj tari chi vorovhetev verj@ 2 hat 0 ya bayc 400-i chi bajanvum
     ( (Today.year % 4 == 0 && Today.year % 100 != 0) || Today.year % 400 == 0 ) ? days[1] = 29 : days[1] = 28;
     
+        Tomorrow = Today;
+    Tomorrow.day++;
     
-    // stex Today structurayi exac chexac@ veragrum enq Tomorrow strukturayin vor popoxutyunner anenq
-    Tomorrow = Today;
-    Tomorrow.day++; // mi orov mecacnum enq nermucac amsativ@
-    
-    // stuguma ete nermucac or@ amsva maximal oric ancnuma uremn amis@ +1 ov mecacnum
     if (Tomorrow.day > days[Tomorrow.month - 1])
     {
         Tomorrow.month++;
         Tomorrow.day = 0;
     }
     
-    // ete amisna 12 ic ancnum uremn tarina +1 ov mecacnum
     if (Tomorrow.month > 12)
     {
         Tomorrow.year++;
@@ -95,14 +89,11 @@ int main(void)
     if (old.hours > 60 || old.hours < 0)
         return 0;
     
-    // tpuma hin structuran mer nermucac
     printf("\nOld");
     viewTime(old.hours, old.minutes, old.seconds);
  
-    // update funkcian verjin varkyanin +1 a gumarum u veragrvuma newTime structurayin Time tip unecox
     Time newTime = time_update(old);
     
-    // tpuma nor structuran +1 gumarac
     printf("New");
     viewTime(newTime.hours, newTime.minutes, newTime.seconds);
     
@@ -110,7 +101,6 @@ int main(void)
     return 0;
 }
 
-// stex time_update funkcian veradarnuma verjum Time tipi t structuran
 Time time_update(Time t)
 {
     t.seconds++;
@@ -137,10 +127,8 @@ Time time_update(Time t)
     return t;
 }
 
-// funkciaya @ndunuma hours minutes seconds u 00:00:00 formatov tpum
 void viewTime(int hours, int minutes, int seconds)
 {
-    // stuguma ete amsativ@ 0-9  orinak ete 9 es grel 09 a grum  sarquma 00:00:00 formatov
     if (hours >= 0 && hours <= 9)
         printf("Time: 0%d", hours);
     else
@@ -152,7 +140,6 @@ void viewTime(int hours, int minutes, int seconds)
     else
         printf(":%d", minutes);
     
-    
     if (seconds >= 0 && seconds <= 9)
         printf(":0%d\n", seconds);
     else
@@ -161,7 +148,7 @@ void viewTime(int hours, int minutes, int seconds)
 }
 */
 
-/* Xndir 8.2.2 esel nuyn verevi xndirna bayc es depqum strukturayi hascena poxancvum
+/* Xndir 8.2.2
 struct Time
 {
     int hours;
@@ -206,7 +193,6 @@ int main(void)
     return 0;
 }
 
-// es depqum funkcian el ban chi veradarcnum qani vor hasceyov mianqamic popoxuma structuran mer nermucac
 void time_update(Time *t)
 {
     t->seconds++;
@@ -233,7 +219,6 @@ void time_update(Time *t)
 
 void viewTime(int hours, int minutes, int seconds)
 {
-    // stuguma ete amsativ@ 0-9  orinak ete 9 es grel 09 a grum  sarquma 00:00:00 formatov
     if (hours >= 0 && hours <= 9)
         printf("Time: 0%d", hours);
     else
@@ -258,7 +243,6 @@ void viewTime(int hours, int minutes, int seconds)
 const int MAXTITLE = 41;
 const int AMOUNT = 4;
 
-// Book karucvacq nerarum e anun@ mekel gin@
 struct Book
 {
     char title[MAXTITLE];
@@ -267,11 +251,9 @@ struct Book
 
 int main(void) {
     
-    // stexcum enq Book tipi Books popoxakan
     struct Book Books[4];
     int totalPrice = 0;
     
-    // nermucum enq 4 hat grqi anun@ mekel gin@
     for (int i = 0; i < AMOUNT; i++)
     {
         printf("[%d] Book-title: ", i + 1);
@@ -282,7 +264,6 @@ int main(void) {
         
     }
     
-    // stexel tpum e ekranin ayn grqer@ voronq sksvum en B tarov
     for (int i = 0; i < AMOUNT; i++)
     {
         if (Books[i].title[0] == 'B')
@@ -292,7 +273,6 @@ int main(void) {
         }
     }
     
-    // B tarov sksvox bolor grqeri @ndhanur gumar@
     printf("\nTotal Price: %d\n", totalPrice);
     
     return 0;
