@@ -5,14 +5,14 @@
 int main(void) {
 
 	char str[100];
-	printf("Greq tox : "); // nermucum enq tox 
+	printf("Greq tox : ");
 	gets(str);
 	int n = strlen(str);
 
-	if (n % 2 != 0) // ete kenta tox@ uremn n - 1 enq anum vor zuyg lini 
+	if (n % 2 != 0)
 		n--;
 
-	for (int i = 0; i < n; i += 2) { // zuyg simvolner@ poxum enq texerov 
+	for (int i = 0; i < n; i += 2) {
 		int temp = str[i];
 		str[i] = str[i + 1];
 		str[i + 1] = temp;
@@ -84,19 +84,19 @@ int main(void) {
 	
 	char arr[M][N], buff[N];
 	printf("Nermuceq 5 hat tox\n");
-	for (int i = 0; i < M; i++) // nermucum enq tox@@@@@
+	for (int i = 0; i < M; i++)
 		gets(arr[i]);
 
 	for (int i = 0; i < M; i++) 
-		for (int j = 0; j < M - 1; j++) // pxpjakavor tesakavorum
-			if (strcmp(arr[j], arr[j + 1]) > 0) { // ete toxi arajin simvol@ mec e erkrord simvolic
-				strcpy(buff, arr[j]); // texerov poxuma toxer@ anunnerov 
+		for (int j = 0; j < M - 1; j++)
+			if (strcmp(arr[j], arr[j + 1]) > 0) {
+				strcpy(buff, arr[j]);
 				strcpy(arr[j], arr[j + 1]);
 				strcpy(arr[j + 1], buff);
 			};
 
 	printf("\nTesakavorvac:\n");
-	for (int i = 0; i < M; i++) // artacuma tox@ axpers
+	for (int i = 0; i < M; i++)
 		puts(arr[i]);
 
 	getchar();
