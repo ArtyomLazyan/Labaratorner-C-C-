@@ -88,20 +88,18 @@ int main(void) {
 /* xndir 4.4 
 int main(void)
 {
-	short c = SHRT_MAX; // 32767 tivna maximum @ndunox arjeqna 
-	short d = c+5;  // d = -32764 texiye unenum gerlcum  
-	float m = 1e20*1e20; // #INF00  aysinqn anverjutyuna talis ancela sahmanic gerlcum float max = 1e38 
-	
+	short c = SHRT_MAX;
+	short d = c+5;
+	float m = 1e20*1e20;
 	int b = 0; 
-	float a = 1.0/b; // #INF00 anverjutyun qani vor zroyi enq bajanum float tiv@   
+	float a = 1.0/b;
     printf("%f\n",a); 
-	float f = 1.0/a; // tali sa zro float bajanum enq anverjutyan 
+	float f = 1.0/a;
 	
-    float g = log(-5); // -1.#IND00 (Отрицательная неопределённость anoroshutyun)
+    float g = log(-5);
 	printf("%f\n",g); 
 	
-	int h = 1/b; // error 0 i chi bajanvum integer@ oshibka programmi 
-	
+	int h = 1/b;
 	return 0;
 }
 */
