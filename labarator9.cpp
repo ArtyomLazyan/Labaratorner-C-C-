@@ -30,8 +30,6 @@ int main() {
     return 0;
 }
 
-
-// erku funkcianern el veradarcnum en 0, bacsakan kam drakan tver
 int compareNum(const void *val1, const void *val2){
     
     // convertacnuma int tipi cucichi u iraric hanuma
@@ -39,7 +37,7 @@ int compareNum(const void *val1, const void *val2){
 }
 
 int compareStr(const void *str1, const void *str2){
-    // konvertacnuma void tipi cucichner@ char tipi cucichi
+
     const char* s1 = (const char*)str1;
     const char* s2 = (const char*)str2;
     
@@ -57,7 +55,6 @@ int main()
     index = func(val);
     printf("Index = %d\n", index);
     
-    // indexi chapov depi dzaxa texapoxum 1@ u ^ nshanov 0 a veracum
     k <<= index;
     val = val ^ k;
     
