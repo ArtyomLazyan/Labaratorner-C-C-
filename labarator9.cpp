@@ -9,7 +9,7 @@ int compareStr(const void *, const void *);
 const int N = 10;
 
 int arr[N] = { 11, -7, 2, 3, 0, 45, -3, 0, 9, 12 };
-char stringArr[5][N] = { "Arnold", "Vaxo", "Hamazasp", "Ramzes", "Kchep" };
+char stringArr[5][N] = { "Armen", "Narek", "Karen", "Artur", "Vazgen" };
 
 int main() {
     
@@ -34,7 +34,7 @@ int main() {
 // erku funkcianern el veradarcnum en 0, bacsakan kam drakan tver
 int compareNum(const void *val1, const void *val2){
     
-    // stexel convertacnuma int tipi cucichi u iraric hanuma
+    // convertacnuma int tipi cucichi u iraric hanuma
     return ( *(int*)val1 - *(int*)val2 );
 }
 
@@ -57,7 +57,7 @@ int main()
     index = func(val);
     printf("Index = %d\n", index);
     
-    // stex vercnuma indexi chapov depi dzaxa texapoxum 1 @ u ^ nshanov 0 a sarqum
+    // indexi chapov depi dzaxa texapoxum 1@ u ^ nshanov 0 a veracum
     k <<= index;
     val = val ^ k;
     
@@ -73,7 +73,6 @@ int func(unsigned num)
     {
         if (num & mas)
         {
-            // dzaxic aja galis arajin 1 in rastvuma eti stacvuma ajic dzax verjin mekna
             index = i + 1;
             
             return 32 - index;
